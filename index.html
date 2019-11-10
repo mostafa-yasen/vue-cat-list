@@ -11,38 +11,43 @@
 </head>
 <body>
     <!-- Start Header -->
-    <head>
-        <h3 class="tex-center">
+    <header>
+        <h3 class="text-center text-upper">
             Cat List
         </h3>
-    </head>
+    </header>
     <!-- End Header -->
 
     <!-- Start Sidebar -->
-    <div class="sidebar">
-        <ul>
+    <sidebar class="sidebar">
+        <ul class="text-upper">
             <li>test</li>
             <li>test</li>
-            <li>test</li>
+            <li class="active">test</li>
             <li>test</li>
             <li>test</li>
         </ul>
-    </div>
+    </sidebar>
     <!-- End Sidebar -->
 
     <!-- Start Content -->
     <div class="content">
-        <div class="name" id="name">Meaw</div>
-        <div class="info" id="info"></div>
+        <div class="info" id="info">
+            Name:<span>Meaw</span> <br>
+            Age:<span>1.5</span> <br>
+            Nickname:<span>Bos Bos</span>
+        </div>
 
         <div class="image">
-            <img src="" alt="Image Not Found">
+            <img src="images/photo-1513360371669-4adf3dd7dff8.jpeg" alt="Image Not Found">
         </div>
     </div>
     <!-- Start Content -->
 
+    <div class="clear"></div>
+
     <!-- Start Footer -->
-    <footer>Copyrights &copy; 2019 Mostafa Yasin</footer>
+    <footer class="text-center">Copyrights &copy; 2019 Mostafa Yasin</footer>
     <!-- End Footer -->
 
     <script src="vendors/vue/vue.js"></script>
