@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,49 +10,51 @@
     <link rel="stylesheet" href="css/main.css">
 
 </head>
+
 <body>
-    <!-- Start Header -->
-    <header>
-        <h3 class="text-center text-upper">
-            Cat List
-        </h3>
-    </header>
-    <!-- End Header -->
+    <div id="app">
+        <!-- Start Header -->
+        <header>
+            <h3 class="text-center text-upper">
+                Cat List
+            </h3>
+        </header>
+        <!-- End Header -->
 
-    <!-- Start Sidebar -->
-    <sidebar class="sidebar">
-        <ul class="text-upper">
-            <li>test</li>
-            <li>test</li>
-            <li class="active">test</li>
-            <li>test</li>
-            <li>test</li>
-        </ul>
-    </sidebar>
-    <!-- End Sidebar -->
-
-    <!-- Start Content -->
-    <div class="content">
-        <div class="info" id="info">
-            Name:<span>Meaw</span> <br>
-            Age:<span>1.5</span> <br>
-            Nickname:<span>Bos Bos</span>
+        <!-- Start Sidebar -->
+        <div class="sidebar">
+            <ul class="text-upper">
+                <li v-for="cat in cats" :data-id="cat.id" class="list-item" :class="cat.id == 1 ? 'active': ''">{{cat.name}}</li>
+            </ul>
         </div>
+        <!-- End Sidebar -->
 
-        <div class="image">
-            <img src="images/photo-1513360371669-4adf3dd7dff8.jpeg" alt="Image Not Found">
+        <!-- Start Content -->
+        <div class="content">
+            <div class="info" id="info">
+                Name: <span>{{ obj.name }}</span> <br>
+                Age: <span>{{ obj.age }}</span> <br>
+                Nickname: <span>{{ obj.nickname }}</span>
+            </div>
+
+            <div class="image">
+                <img :src="obj.img" alt="Image Not Found">
+            </div>
         </div>
+        <!-- Start Content -->
+
+        <div class="clear"></div>
+
+        <!-- Start Footer -->
+        <footer class="text-center">Copyrights &copy; 2019 Mostafa Yasin</footer>
+        <!-- End Footer -->
     </div>
-    <!-- Start Content -->
 
-    <div class="clear"></div>
-
-    <!-- Start Footer -->
-    <footer class="text-center">Copyrights &copy; 2019 Mostafa Yasin</footer>
-    <!-- End Footer -->
+    <script src="vendors/jquery/jquery-3.4.1.min.js"></script>
 
     <script src="vendors/vue/vue.js"></script>
 
     <script src="js/app.js"></script>
 </body>
+
 </html>
