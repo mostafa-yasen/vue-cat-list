@@ -6,6 +6,12 @@
     box-sizing: border-box;
 }
 
+a.link {
+    color: #fcaa47;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 body {
     color: #cff5fe;
     background-color: #14484f;
@@ -46,6 +52,19 @@ header {
     float: left;
 }
 
+.search-field {
+    background-color: rgba(255,255,255, .5);
+    font-size: .8em;
+    padding: 10px;
+    display: block;
+    width: 100%;
+    border: none;
+}
+
+.search-field:focus {
+    outline: none;
+}
+
 /* Content */
 .content {
     width: 80%;
@@ -62,6 +81,7 @@ header {
     font-weight: lighter;
     top: 15px;
     right: 15px;
+    border-radius: 3px;
 }
 
 .content #info span {

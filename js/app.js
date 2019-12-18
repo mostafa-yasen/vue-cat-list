@@ -2,6 +2,8 @@ $(function () {
     var vm = new Vue({
         el: "#app",
         data: {
+            title: "Cat List",
+            search:'',
             obj: {
                 id: 1,
                 name: "Bosy",
@@ -40,13 +42,16 @@ $(function () {
             ]
         },
         methods: {
-            sayHi: function () {
-                alert("Hi");
+            setCat: function (cat) {
+                this.obj = cat;
             }
         },
         computed: {
-            fullname: function () {
-                return `${this.name} ${this.nickname}`;
+            filtering: function () {
+                var regex = new RegExp(this.search, 'i');
+                return this.cats.filter(el => {
+                    return el.name.match(regex);
+                });
             }
         }
     });

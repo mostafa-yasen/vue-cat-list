@@ -16,7 +16,7 @@
         <!-- Start Header -->
         <header>
             <h3 class="text-center text-upper">
-                Cat List
+                {{ title }}
             </h3>
         </header>
         <!-- End Header -->
@@ -24,7 +24,10 @@
         <!-- Start Sidebar -->
         <div class="sidebar">
             <ul class="text-upper">
-                <li v-for="cat in cats" :data-id="cat.id" class="list-item" :class="cat.id == 1 ? 'active': ''">{{cat.name}}</li>
+                <li class="list-search" style="padding: 0;">
+                    <input v-model="search" type="text" placeholder="search field" class="search-field">
+                </li>
+                <li v-for="cat in filtering" :data-id="cat.id" class="list-item" :class="cat.id == 1 ? 'active': ''" @click="setCat(cat)">{{cat.name}}</li>
             </ul>
         </div>
         <!-- End Sidebar -->
@@ -46,7 +49,9 @@
         <div class="clear"></div>
 
         <!-- Start Footer -->
-        <footer class="text-center">Copyrights &copy; 2019 Mostafa Yasin</footer>
+        <footer class="text-center">
+            Copyrights &copy; 2019 <a class="link" href="https://github.com/mostafa-yasen">Mostafa Yasin</a>
+        </footer>
         <!-- End Footer -->
     </div>
 
